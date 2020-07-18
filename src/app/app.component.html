@@ -1,0 +1,40 @@
+<div class="jumbotron bg-primary text-white">
+  <h1 class="display-4 Heading">FEE COLLECTION</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-3 offset-2">
+      <label>Enter Student Type : </label>
+    </div>
+    <div class="col-12 col-md-3">
+      <input type="text" class="form-control" (keydown.enter)="addfee()" [formControl]="type">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-3 offset-2">
+      <label>Tution Fee : </label>
+    </div>
+    <div class="col-12 col-md-3">
+      <input type="number" class="form-control" disabled [formControl]="tutionFee">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-3 offset-2">
+      <label>Bus Fee : </label>
+    </div>
+    <div class="col-12 col-md-3">
+      <input type="number" class="form-control" disabled [formControl]="busFee">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-3 offset-2">
+      <label>Hostel Fee : </label>
+    </div>
+    <div class="col-12 col-md-3">
+      <input type="number" class="form-control" disabled [formControl]="hostelFee">
+    </div>
+  </div>
+  <div class="row justify-content-center" *ngIf="totalFee.value!=''">
+    <p>The fees to be paid by the student is Rs. {{totalFee.value}} </p>
+  </div>
+</div>
